@@ -16,3 +16,7 @@ jobs:
           node-version: "20"
       - run: npm install
       - run: npm run build
+      - name: Production backend contract smoke
+        env:
+          VITE_HHHAI_API_URL: https://hhhai.onrender.com
+        run: npm run contract:smoke
